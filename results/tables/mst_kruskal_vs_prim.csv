@@ -1,0 +1,7 @@
+Graph,Algorithm,Avg time (us),Edges examined,Sort comparisons,DSU ops (find+union),PQ ops (push+poll),MST weight,Connected
+Small,Kruskal,9.47,14,107,42,-,129,true
+Small,Prim,3.37,30,-,-,60,129,true
+Medium,Kruskal,171.52,164,3827,492,-,1170,true
+Medium,Prim,128.59,500,-,-,1000,1170,true
+Large,Kruskal,975.83,3356,50369,10068,-,13123,true
+Large,Prim,1045.16,5000,-,-,10000,13123,true

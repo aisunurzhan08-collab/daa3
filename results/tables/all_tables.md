@@ -1,0 +1,50 @@
+### mst_kruskal_vs_prim
+
+| Graph | Algorithm | Avg time (us) | Edges examined | Sort comparisons | DSU ops (find+union) | PQ ops (push+poll) | MST weight | Connected |
+|---|---|---|---|---|---|---|---|---|
+| Small | Kruskal | 9.47 | 14 | 107 | 42 | - | 129 | true |
+| Small | Prim | 3.37 | 30 | - | - | 60 | 129 | true |
+| Medium | Kruskal | 171.52 | 164 | 3827 | 492 | - | 1170 | true |
+| Medium | Prim | 128.59 | 500 | - | - | 1000 | 1170 | true |
+| Large | Kruskal | 975.83 | 3356 | 50369 | 10068 | - | 13123 | true |
+| Large | Prim | 1045.16 | 5000 | - | - | 10000 | 13123 | true |
+
+### dijkstra
+
+| Graph | Avg time (us) | Edge relaxations | PQ ops | Reachable |
+|---|---|---|---|---|
+| Small | 7.83 | 60 | 36 | 10/10 |
+| Medium | 43.42 | 1000 | 400 | 100/100 |
+| Large | 458.87 | 10000 | 3974 | 1000/1000 |
+
+### topological_sort
+
+| Graph | Input | Avg time (us) | Edges examined | Is DAG | Vertices in order |
+|---|---|---|---|---|---|
+| Small | DAG | 6.36 | 60 | true | 10/10 |
+| Small | Cyclic | 0.70 | 30 | false | 0/10 |
+| Medium | DAG | 32.71 | 1000 | true | 100/100 |
+| Medium | Cyclic | 6.35 | 500 | false | 0/100 |
+| Large | DAG | 237.96 | 10000 | true | 1000/1000 |
+| Large | Cyclic | 11.49 | 5054 | false | 10/1000 |
+
+### scc
+
+| Graph | Input | Avg time (us) | Edges examined | SCC count | Largest SCC |
+|---|---|---|---|---|---|
+| Small | Cyclic | 2.08 | 30 | 1 | 10 |
+| Small | DAG | 1.38 | 30 | 10 | 1 |
+| Medium | Cyclic | 11.67 | 500 | 1 | 100 |
+| Medium | DAG | 12.33 | 500 | 100 | 1 |
+| Large | Cyclic | 132.84 | 5000 | 18 | 983 |
+| Large | DAG | 48.41 | 5000 | 1000 | 1 |
+
+### dsu_optimizations
+
+| Variant | find calls | union calls | Parent pointers followed | Avg steps per find |
+|---|---|---|---|---|
+| No optimization | 11000 | 5000 | 1071576 | 97.42 |
+| Path compression only | 11000 | 5000 | 16282 | 1.48 |
+| Union by rank only | 11000 | 5000 | 20406 | 1.86 |
+| Both (used in project) | 11000 | 5000 | 10526 | 0.96 |
+

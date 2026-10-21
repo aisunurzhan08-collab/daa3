@@ -1,0 +1,31 @@
+--- MST ---
+PASS  small graph: Kruskal weight = 6
+PASS  small graph: Prim weight = 6
+PASS  disconnected: Kruskal detects it
+PASS  disconnected: Prim detects it
+PASS  disconnected: both give forest weight 3
+PASS  cycle (triangle): weight = 3, 2 edges
+PASS  multiple MSTs (square): both give weight 3
+PASS  duplicate weights (K4): both give weight 15
+PASS  single vertex: weight 0, connected
+PASS  200 random connected graphs: Kruskal weight == Prim weight, V-1 edges
+--- Topological sort ---
+PASS  small DAG: valid order
+PASS  cycle 0->1->2->0: detected, no ordering
+PASS  single vertex: order = [0]
+PASS  100 random DAGs: order is valid every time
+PASS  100 random directed graphs: topological sort agrees with SCC about cycles
+--- SCC ---
+PASS  two cycles joined by one edge: 2 SCCs {0,1,2} and {3,4,5}
+PASS  single vertex: 1 SCC
+PASS  DAG: every vertex is its own SCC
+PASS  100 random graphs: every vertex is in exactly one SCC
+--- Dijkstra ---
+PASS  small graph: distances 0,3,1,4
+PASS  small graph: path to 3 is 0,2,1,3
+PASS  vertex 4 is unreachable (INF, empty path)
+PASS  single vertex: distance 0
+PASS  negative weight is rejected
+PASS  100 random directed graphs: Dijkstra == Floyd-Warshall (incl. unreachable)
+
+Passed: 25, Failed: 0

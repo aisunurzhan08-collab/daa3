@@ -1,0 +1,4 @@
+Graph,Avg time (us),Edge relaxations,PQ ops,Reachable
+Small,7.83,60,36,10/10
+Medium,43.42,1000,400,100/100
+Large,458.87,10000,3974,1000/1000

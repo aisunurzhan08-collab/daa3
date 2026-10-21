@@ -1,0 +1,7 @@
+Graph,Input,Avg time (us),Edges examined,SCC count,Largest SCC
+Small,Cyclic,2.08,30,1,10
+Small,DAG,1.38,30,10,1
+Medium,Cyclic,11.67,500,1,100
+Medium,DAG,12.33,500,100,1
+Large,Cyclic,132.84,5000,18,983
+Large,DAG,48.41,5000,1000,1

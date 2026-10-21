@@ -1,0 +1,5 @@
+Variant,find calls,union calls,Parent pointers followed,Avg steps per find
+No optimization,11000,5000,1071576,97.42
+Path compression only,11000,5000,16282,1.48
+Union by rank only,11000,5000,20406,1.86
+Both (used in project),11000,5000,10526,0.96

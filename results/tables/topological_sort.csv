@@ -1,0 +1,7 @@
+Graph,Input,Avg time (us),Edges examined,Is DAG,Vertices in order
+Small,DAG,6.36,60,true,10/10
+Small,Cyclic,0.70,30,false,0/10
+Medium,DAG,32.71,1000,true,100/100
+Medium,Cyclic,6.35,500,false,0/100
+Large,DAG,237.96,10000,true,1000/1000
+Large,Cyclic,11.49,5054,false,10/1000
